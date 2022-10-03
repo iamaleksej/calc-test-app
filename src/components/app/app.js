@@ -90,6 +90,7 @@ const App = () => {
       }, 2000)
    };
 
+
    const visibleHelpTitle = (helpState, helpTitle) => helpState ? helpTitle : ''
    const memoizedHelpCar = useMemo(() => visibleHelpTitle(helpCar, 'Введите число от 1 до 6 млн'), [helpCar])
    const memoizedHelpPercent = useMemo(() => visibleHelpTitle(helpPercent, 'Введите число от 10 до 60 %'), [helpPercent])
