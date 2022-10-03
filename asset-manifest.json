@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/calc-test-app/static/css/main.b2730339.css",
+    "main.css": "/calc-test-app/static/css/main.e814de44.css",
     "main.js": "/calc-test-app/static/js/main.ab33c906.js",
     "static/media/Nekst-Black.ttf": "/calc-test-app/static/media/Nekst-Black.dffaebf93d38d4c41536.ttf",
     "static/media/Gilroy-Regular.ttf": "/calc-test-app/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
@@ -9,11 +9,11 @@
     "static/media/Gilroy-Regular.woff": "/calc-test-app/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
     "static/media/Gilroy-Regular.woff2": "/calc-test-app/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "index.html": "/calc-test-app/index.html",
-    "main.b2730339.css.map": "/calc-test-app/static/css/main.b2730339.css.map",
+    "main.e814de44.css.map": "/calc-test-app/static/css/main.e814de44.css.map",
     "main.ab33c906.js.map": "/calc-test-app/static/js/main.ab33c906.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2730339.css",
+    "static/css/main.e814de44.css",
     "static/js/main.ab33c906.js"
   ]
 }
