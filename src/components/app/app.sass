@@ -1,0 +1,140 @@
+//reset styles
+
+*, *:before, *:after
+   box-sizing: border-box
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+   margin: 0
+   padding: 0
+   border: 0
+   font-size: 100%
+   font: inherit
+   vertical-align: baseline
+   text-rendering: optimizeLegibility
+   -webkit-font-smoothing: antialiased
+   text-size-adjust: none
+
+footer, header, nav, section, main
+   display: block
+
+body
+   line-height: 1
+
+ol, ul
+   list-style: none
+
+blockquote, q
+   quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+   content: ''
+   content: none
+
+table
+   border-collapse: collapse
+   border-spacing: 0
+
+input
+   -webkit-appearance: none
+   -moz-appearance: textfield
+   border-radius: 0
+   margin: 0
+   padding: 0
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+   -webkit-appearance: none
+   -moz-appearance: textfield
+   margin: 0
+
+$tablet: 1024px
+$mobile: 767px
+$mobile-small: 424px
+$fs54: 54px
+$fs34: 34px
+$fs30: 30px
+$fs22: 22px
+$fs16: 16px
+$fs14: 14px
+
+@font-face
+   font-family: 'Gilroy'
+   src: url('../../fonts/Gilroy-Regular.woff2') format('woff2')
+   src: url('../../fonts/Gilroy-Regular.woff') format('woff')
+   src: url('../../fonts/Gilroy-Regular.ttf') format('truetype')
+@font-face
+   font-family: 'Nekst-Black'
+   src: url('../../fonts/Nekst-Black.woff2') format('woff2')
+   src: url('../../fonts/Nekst-Black.woff') format('woff')
+   src: url('../../fonts/Nekst-Black.ttf') format('truetype')
+.caret-none
+   caret-color: transparent
+#wrapper
+   max-width: 1440px
+   height: 100vh
+   display: flex
+   margin: auto
+   overflow-x: hidden
+   background: #fff
+   @media only screen and (max-width: $mobile)
+      height: 100%
+.form
+   display: flex
+   justify-content: center
+   flex-direction: column
+   padding: 0px 47px
+   width: 100%
+   @media only screen and (max-width: $mobile)
+      padding: 0px 36px
+   @media only screen and (max-width: $mobile)
+      padding: 44px 20px
+.title
+   font-family: 'Nekst-Black'
+   font-style: normal
+   font-weight: 900
+   font-size: $fs54
+   line-height: 90%
+   color: #111
+   width: 753px
+   height: 98px
+   @media only screen and (max-width: $mobile)
+      width: 100%
+   @media only screen and (max-width: $mobile)
+      font-size: $fs34
+      height: auto
+
+.scales
+   display: flex
+   position: relative
+   margin-top: 32px
+   width: 100%
+   gap: 32px
+   justify-content: space-between
+   color: #575757
+   @media only screen and (max-width: $tablet)
+      flex-direction: column
+
+.result-btn
+   display: flex
+   margin-top: 44px
+   justify-content: space-between
+   gap: 32px
+   @media only screen and (max-width: $tablet)
+      flex-direction: column
+.result
+   width: 68.7%
+   display: flex
+   gap: 32px
+   color: #575757
+   @media only screen and (max-width: $tablet)
+      width: 100%
+      gap: 29px
+   @media only screen and (max-width: $mobile-small)
+      flex-wrap: wrap
+.btn-wrapper
+   display: flex
+   align-items: center
+   width: 33.3%
+   @media only screen and (max-width: $tablet)
+      width: 345px
+   @media only screen and (max-width: $mobile)
+      width: 100%
