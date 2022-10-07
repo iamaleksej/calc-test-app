@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+Задание: сверстать калькулятор лизинга авто
+Макеты
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+В Figma отражены адаптивные версии и все состояния элементов при наведении, клике и т.д.
 
-## Available Scripts
+https://www.figma.com/community/file/1157319485563502086
 
-In the project directory, you can run:
+Для работы с макетами необходимо создать их копию: http://joxi.ru/vAWnYv5cR1WK52
 
-### `npm start`
+Шрифты можно скачать по ссылкам:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Nekst-Black
+Gilroy
+Общие требования
+Теги Title и Description должны располагаться сразу после открытия тега head. Значения можно прописать любые.
+Вынести все стили, которые используются в макете в отдельные CSS-файлы. 
+Добиться кроссбраузерности:
+Google Chrome
+Android
+Mobile Safari
+Яндекс.Браузер
+Firefox
+Opera.
+Не допускать конфликта CSS-стилей.
+Пройти валидацию https://validator.w3.org/. Это не критичное требование, но элементарных ошибок верстки не должно быть (например, незакрытые теги, пропуск обязательных атрибутов и т.п.).
+Если что-то незначительное не отражено в макетах – делайте на свое усмотрение и пишите комментарий при сдаче задания.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Требования к калькулятору
+Калькулятор должен инициализироваться с указанными значениями по умолчанию;
+В каждое поле можно ввести значение как с клавиатуры, так и с помощью ползунка;
+При выборе значения с помощью ползунка, все числа должны пересчитываться динамически в процессе движения ползунка, а не только после его остановки;
+У каждого поля есть максимальное и минимальное значение — ползунок должен ограничивать пользователя в выборе данных, а при вводе некорректного значения с клавиатуры, оно должно сбрасываться к ближайшему корректному числу (максимуму или минимуму).
+Для поля “Стоимость автомобиля” границы: 1 млн.руб. — 6 млн.руб.;
+Для поля “Первоначальный взнос” границы: 10% - 60% (здесь ввод происходит именно в процентах от стоимости, а не рублях; рубли - результат расчета от введенной стоимости автомобиля);
+Для поля “Срок лизинга” границы: 1 - 60 месяцев;
+Формулы расчета для полей:
+Процентная ставка = 3.5%
+Для поля “Первоначальный взнос”: 
+Первоначальный взнос (в процентах) * Стоимость автомобиля
+Для поля “Сумма договора лизинга”:
+Первоначальный взнос + Срок кредита в месяцах * Ежемесячный платеж
+Для поля “Ежемесячный платеж от”:
+(Стоимость автомобиля - Первоначальный взнос) * ((Процентная ставка * (1 + Процентная ставка)^Срок кредита в месяцах) / ((1 + Процентная ставка)^Срок кредита в месяцах - 1)) 
 
-### `npm test`
+const monthPay = (price - initial) * ((0.035 * Math.pow((1 + 0.035), months)) / (Math.pow((1 + 0.035), months) - 1));
+По кнопке “Оформить заявку” должен формироваться запрос, который отправляет все данные калькулятора на бэкенд, например, чтобы потом backend мог использовать эти данные для передачи в CRM-систему.
+URL для запроса: https://eoj3r7f3r4ef6v4.m.pipedream.net
+Метод запроса: POST
+Заголовок Content-Type: application/json
+Все данные с формы передавать в JSON-формате в теле запроса.
+В момент клика по кнопке кнопка должна блокироваться от возможности повторной отправки данных на время выполнения запроса к бэкенду, а внутри кнопки отображаться прелоадер. Инпуты и слайдеры на время отправки должны блокироваться.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+/////////////////////////////////////////////////////////////////////////////////
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Устанавливаем модули (npm i)
+2. Открываем.
+3. Пользуемся калькулятором
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+/////////////////////////////////////////////////////////////////////////////////
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+node : v14.17.1
