@@ -1,0 +1,64 @@
+.vacancies
+	&__item
+		min-width: 460px
+		min-height: 160px
+		background-color: #fff
+		margin-bottom: 15px
+		padding: 20px 20px 10px	20px
+		border-radius: 10px
+		display: flex
+		position: relative
+		cursor: pointer
+		&:hover .vacancies__line
+			visibility: visible
+
+	&__line
+		position: absolute
+		background-color: #0070FB
+		visibility: hidden
+		height: 100%
+		width: 10px
+		left: 0
+		top: 0
+		border-radius: 10px 0 0 10px
+	&__logo
+		width: 68px
+		height: 50px
+		background-color: #fff
+		border-radius: 10px
+		& .image
+			border-radius: 10px
+			width: 68px
+			height: 50px
+
+	&__date
+		color: #a1aeb9
+		font-weight: 500
+		font-size: 12px
+	&__city,
+	&__company
+		color: #9aaab5
+		font-size: 14px
+		font-weight: 700
+		margin-bottom: 7px
+	&__data-block
+		margin: 0 15px
+		width: 274px
+	&__title
+		color: #000
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 7px
+	&__icon-block
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-end
+	&__icon-favorite
+		width: 20px
+		height: 20px
+		float: right
+		& .image
+			display: none
+		& .icon-favorite-active
+			display: block
